@@ -1,20 +1,25 @@
 "use client";
 
+import {motion} from "motion/react";
 import ClientExperienceWrapper from "@/components/wrappers/client-experience-wrapper";
+import DraggableCarousel from "@/components/contents/culinary-content";
 
 export default function Home() {
     return (
         <main className="relative flex flex-col items-center justify-center min-h-screen">
             {/* Hero */}
             <ClientExperienceWrapper>
-                <section className="relative w-full h-full min-h-screen p-24 px-8 bg-center bg-cover"
-                         style={{backgroundImage: "url('/culinary-page/bg.png')"}}>
-                    <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-normal tracking--tight-4 text-white text-[10vw] lg:text-[5vw]">
-                        Something
-                        <sup className="relative -top-[20px] left-[10px] text-[4vw] lg:text-[1.5vw]">
-                            ™
-                        </sup>
-                    </h1>
+                <section className="flex flex-col justify-center items-center w-full h-full min-h-screen px-8 bg-[url('/culinary-page/bg.png')] bg-[#283035] bg-blend-screen bg-center bg-cover">
+                    <motion.h1
+                        initial={{opacity: 0, y: 40}}
+                        whileInView={{ opacity: 1, y: 0,transition: { delay: 0, duration: 1.2 }}}
+                        className="md:mt-12 md:mb-8 font-bodoni tracking--tight-4 text-white text-[10vw] lg:text-[5vw]">
+                        Our Specialty
+                    </motion.h1>
+                    <DraggableCarousel />
+                </section>
+                <section>
+
                 </section>
             </ClientExperienceWrapper>
         </main>
