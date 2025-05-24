@@ -12,13 +12,16 @@ interface ClientExperienceWrapperProps {
 
 export default function ClientExperienceWrapper({ children }: ClientExperienceWrapperProps) {
     const contentRef = useRef<HTMLDivElement | null>(null);
-    const timers = useRef<{ setup?: NodeJS.Timeout, reveal?: NodeJS.Timeout }>({});
-
+    const timers = useRef<{ setup?: NodeJS.Timeout; reveal?: NodeJS.Timeout }>({
+        setup: undefined,
+        reveal: undefined,
+    });
     useEffect(() => {
+        const currentTimers = timers.current;
         // This timeout is for GSAP setups in CulinaryHero and CulinaryForestOverlay.
         // These components mount within the initially hidden contentRef div.
         // Their useGSAP hooks run and set initial states (opacity 0, off-screen positions).
-        timers.current.setup = setTimeout(() => {
+        currentTimers.setup = setTimeout(() => {
             // GSAP setups are assumed complete. Now manage preloader and content visibility.
             const preloaderElement = document.getElementById('page-preloader');
             if (preloaderElement) {
@@ -36,11 +39,16 @@ export default function ClientExperienceWrapper({ children }: ClientExperienceWr
                 contentRef.current.classList.remove('opacity-0', 'invisible');
                 contentRef.current.classList.add('opacity-100', 'visible');
             }
+
+            currentTimers.reveal = setTimeout(() => { /* ... */ },);
+
         }, 300); // Adjust timing: allow GSAP in children to initialize
 
         return () => {
-            clearTimeout(timers.current.setup);
-            clearTimeout(timers.current.reveal); // Though reveal timer isn't explicitly separate now
+            clearTimeout(currentTimers.setup);
+            if (currentTimers.reveal) {
+                clearTimeout(currentTimers.reveal);
+            }
         };
     }, []); // Runs once after ClientExperienceWrapper mounts
 

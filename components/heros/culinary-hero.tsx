@@ -57,7 +57,7 @@ export default function CulinaryHero() {
         <section
             ref={scope}
             id="hero"
-            className="relative flex flex-col w-full min-h-screen overflow-hidden bg-cover bg-[url('/culinary-page/bg.svg')] bg-slate-700/30 bg-blend-multiply text-white md:h-screen md:flex-row"
+            className="relative flex flex-col w-full min-h-screen overflow-hidden bg-cover bg-[url('/culinary-page/bg.svg')] bg-[#283035] bg-blend-screen text-white md:h-screen md:flex-row"
         >
             {/* ─────────── Left / content ─────────── */}
             <div className="min-w-0 md:basis-3/4">

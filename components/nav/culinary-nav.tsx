@@ -65,7 +65,7 @@ export default function CulinaryNav() {
     return (
         <nav ref={container} className="relative">
             {/* Menu Bar (Always Visible) */}
-            <div className="fixed top-0 left-0 w-screen p-[2em] flex justify-between items-center z-[10]  mix-blend-difference">
+            <div className="fixed top-0 left-0 w-screen p-[2em] flex justify-between items-center z-[10] mix-blend-difference">
                 <div className="menu-logo">
                     <Link href="/culinary" className="cursor-pointer hover:text-neutral-700 block mb-2 md:mb-1">
                         Ember&Oak
