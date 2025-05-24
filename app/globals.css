@@ -10,6 +10,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-bodoni: var(--font-bodoni-moda);
+  --font-pacifico: var(--font-pacifico-regular);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +20,23 @@
     --foreground: #ededed;
   }
 }
+
+
+/* ─── Hide every scrollbar, any engine, still allow scrolling ─── */
+@layer base {
+
+  html, body {
+    /* standards-track & Firefox */
+    scrollbar-width: none;
+    /* old IE / pre-Chromium Edge */
+    -ms-overflow-style: none;
+  }
+  /* WebKit / Blink */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 
 body {
   background: var(--background);
