@@ -57,7 +57,7 @@ export default function CulinaryHero() {
         <section
             ref={scope}
             id="hero"
-            className="relative flex flex-col w-full min-h-screen overflow-hidden bg-cover bg-[url('/culinary-page/bg.svg')] bg-[#283035] bg-blend-screen text-white md:h-screen md:flex-row"
+            className="relative flex flex-col w-full min-h-screen overflow-hidden bg-cover bg-[url('/culinary-page/bg.png')] bg-[#283035] bg-blend-screen text-white md:h-screen md:flex-row"
         >
             {/* ─────────── Left / content ─────────── */}
             <div className="min-w-0 md:basis-3/4">
@@ -106,7 +106,7 @@ export default function CulinaryHero() {
             <div className="relative flex items-center w-full h-[18vh] md:h-full justify-center bg-[#ab722c] md:basis-1/4">
                 {/* platter photo */}
                 <Image
-                    src="/culinary-page/hero.svg"
+                    src="/culinary-page/hero.png"
                     alt="Assorted appetizers on wooden platter"
                     width={1024}
                     height={1024}

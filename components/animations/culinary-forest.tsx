@@ -8,12 +8,12 @@ import Image from 'next/image';
 gsap.registerPlugin(ScrollTrigger);
 
 const leavesData = [
-    { id: 'L1', src: '/culinary-page/leaf-one.svg', basePosition: { left: '0%' }, xPercentOffset: -20, size: 800, rotation: -10, speedFactor: 1.3, initialYPercent: 350, blurAmount: 6, zIndex: 3 },
-    { id: 'L2', src: '/culinary-page/leaf-two.svg', basePosition: { left: '0%' }, xPercentOffset: -55, size: 1300, rotation: -10, speedFactor: 1.1, initialYPercent: 350, blurAmount: 4, zIndex: 2 },
-    { id: 'L3', src: '/culinary-page/leaf-three.svg', basePosition: { left: '0%' }, xPercentOffset: -40, size: 600, rotation: -25, speedFactor: 0.4, initialYPercent: 430, blurAmount: 2, zIndex: 1 },
-    { id: 'R1', src: '/culinary-page/leaf-four.svg', basePosition: { left: '100%' }, xPercentOffset: -80, size: 900, rotation: -180, speedFactor: 0.8, initialYPercent: 275, blurAmount: 3, zIndex: 1 },
-    { id: 'R2', src: '/culinary-page/leaf-five.svg', basePosition: { left: '100%' }, xPercentOffset: -60, size: 1200, rotation: 0, speedFactor: 1, initialYPercent: 40, blurAmount: 4, zIndex: 3 },
-    { id: 'R3', src: '/culinary-page/leaf-six.svg', basePosition: { left: '100%' }, xPercentOffset: -60, size: 1300, rotation: -15, speedFactor: 1.5, initialYPercent: 300, blurAmount: 6, zIndex: 2 },
+    { id: 'L1', src: '/culinary-page/leaf-one.png', basePosition: { left: '0%' }, xPercentOffset: -20, size: 800, rotation: -10, speedFactor: 1.3, initialYPercent: 350, blurAmount: 6, zIndex: 3 },
+    { id: 'L2', src: '/culinary-page/leaf-two.png', basePosition: { left: '0%' }, xPercentOffset: -55, size: 1300, rotation: -10, speedFactor: 1.1, initialYPercent: 350, blurAmount: 4, zIndex: 2 },
+    { id: 'L3', src: '/culinary-page/leaf-three.png', basePosition: { left: '0%' }, xPercentOffset: -40, size: 600, rotation: -25, speedFactor: 0.4, initialYPercent: 430, blurAmount: 2, zIndex: 1 },
+    { id: 'R1', src: '/culinary-page/leaf-four.png', basePosition: { left: '100%' }, xPercentOffset: -80, size: 900, rotation: -180, speedFactor: 0.8, initialYPercent: 275, blurAmount: 3, zIndex: 1 },
+    { id: 'R2', src: '/culinary-page/leaf-five.png', basePosition: { left: '100%' }, xPercentOffset: -60, size: 1200, rotation: 0, speedFactor: 1, initialYPercent: 40, blurAmount: 4, zIndex: 3 },
+    { id: 'R3', src: '/culinary-page/leaf-six.png', basePosition: { left: '100%' }, xPercentOffset: -60, size: 1300, rotation: -15, speedFactor: 1.5, initialYPercent: 300, blurAmount: 6, zIndex: 2 },
 ];
 
 export default function CulinaryForestOverlay() {
